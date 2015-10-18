@@ -14,6 +14,22 @@ CommentDAO.prototype.getSize = function(){
 
 };
 
+CommentDAO.prototype.getCommentsPaginate = function(offset, size, res, callback){
+	try{
+		this.dbsession.collection('comment', function(error, data){
+			console.log("getCommentsPaginate "+offset, size);
+			data.find().sort({date:1}).skip(offset).limit(size).toArray(function(err, found){
+				console.log("getCommentsPaginate success "+found.toString());
+				callback(found, res);
+			});
+		});
+	} catch(err){
+		console.log("Error getting Comments "+err);
+		return err;
+	}
+
+};
+
 CommentDAO.prototype.addComment = function(comment){
 		this.dbsession.collection('comment', function(error, data){
 	 	data.insert(comment, function(error, results){

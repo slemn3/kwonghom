@@ -1,8 +1,7 @@
 exports.index = function (req,res) {
-	console.log("CONTROLLER");
-	console.log(App.env);
-	commentService.test();
-	res.send("aaa");
+	var results = commentService.getComments(0, 5, res);
+	console.log("rendering "+results);
+	//res.send(results);
 };
 
 exports.addComment = function (req,res) {

@@ -12,6 +12,15 @@ CommentService.prototype.test = function(){
 	console.log("------------- Starting Twitter Stream ------------ "+ this.commentDAO.getSize());
 }
 
+CommentService.prototype.processComments = function(data, res){
+	console.log("Found data: "+ data);
+	res.send(data);
+}
+
+CommentService.prototype.getComments = function(offset, pagesize, res){
+	var results = this.commentDAO.getCommentsPaginate(offset, pagesize, res, this.processComments);
+}
+
 CommentService.prototype.newComment = function(input){
 	var current_date = (new Date()).valueOf().toString();
 	var random = Math.random().toString();
