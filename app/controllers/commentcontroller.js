@@ -6,13 +6,11 @@ exports.index = function (req,res) {
 };
 
 exports.addComment = function (req,res) {
-	var current_date = (new Date()).valueOf().toString();
-	var random = Math.random().toString();
-	var id = crypto.createHash('sha1').update(current_date + random).digest('hex');
-	res.send(id);
+	console.log(req.param("text"));
+	var response = commentService.newComment(req.param("text"));
+	res.send(response);
 };
 
 
 
 App.require('app/service/CommentService');
-var crypto = require('crypto')
