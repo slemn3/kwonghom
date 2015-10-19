@@ -19,35 +19,74 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-	<body>
-		<h1>Kwong "Tommy" Hom</h1>
-		<br/>
+	<body style="text-align:center">
+		<ul class="nav nav-pills nav-justified">
+		  <li class="active" ><a href="#home" data-toggle="tab">Home</a></li>
+		  <li><a href="#life" data-toggle="tab">About</a></li>
+		  <li><a href="#celebrate" data-toggle="tab">Photos</a></li>
+		  <li><a href="#more" id="#guestbookbutton" data-toggle="tab">Guestbook</a></li>
+		</ul>
 		<div class="row ">
-			<div class="navbar container col-xs-6 col-md-4">
-				<br/>
-				<div class="nav" value="Life">Life</div><br/>
-				<div class="nav" value="Celebrate">Celebrate</div><br/>
-				<div class="nav" value="More">More</div><br/>
+			<!-- LEFT COLUMN-->
+			<div id="leftmost" class="fittoheight container col-md-3">
+				
 			</div>
+			<!-- LEFT COLUMN-->
 
-			<div class="detail col-xs-12 col-md-8 nav-tabs" id="life">
-				October 24, 1929 - October 11, 2015
-			</div>
-
-			<div class="detail col-xs-12 col-md-8 nav-tabs" id="celebrate">
-				<p>
-				A celebration of his life will be held on Saturday, October 24, 2015, 10am, at Alhambra True Light Presbyterian Church, 20 W. Commonwealth Ave., Alhambra, CA.
+			<!-- MIDDLE COLUMN-->
+			<div class="tab-content col-md-6 nav-tabs tab-pane" data-toggle="tab">
+				<h1 style="font-size:50px;font-weight:bold">Kwong "Tommy" Hom</h1>
+				<i>October 24, 1929 – October 11, 2015</i>
 				<br/><br/>
-				Lunch to follow at NBC Seafood Restaurant, 404 S. Atlantic Blvd., Monterey Park, CA.
-				<br/><br/>
-				</p>
-			</div>
 
-			<div class="detail col-xs-12 col-md-8 nav-tabs" id="more">
-				<p>
-				Please check back at this site for more information in the next few days.
-				</p>
+				<div class="detail nav-tabs tab-pane active" id="home">
+					<p >
+
+						<h2>
+						Please join us in a celebration of his life on <span>Saturday, October 24, 2015</span>
+						</h2>
+						<br/><br/>
+						A memorial service will be held at 10 am at Alhambra True Light Presbyterian Church, 20 W. Commonwealth Ave., Alhambra, CA. Lunch will follow at NBC Seafood Restaurant, 404 S. Atlantic Blvd., Monterey Park, CA.
+						<br/><br/>
+						Kwong “Tommy” passed away on October 11, 2015 due to complications of pneumonia. He is survived by his wife, Betty Hom; children, Nancy (Dick) Lem, Robert Hom, Natalie (Danny) Hum, Noreen (Brian) Soria; grandchildren, Mark and Scott Lem, Melissa Charpied and Alex Hom, Noelle, Nadine and Nicholas Hum, Nathan and Jonathan Soria; and great granddaughter, Cadence Charpied.
+						<br/><br/>
+						<i>(Note: Limited parking for elderly/handicapped only at Alhambra True Light Presbyterian Church site. Additional parking is available across the street at the Alhambra Superior Court building on 1st Street.)</i>
+
+					</p>
+
+				</div>
+
+				<div class="detail nav-tabs tab-pane active" id="life">
+					<p >
+					Please check back at this site for more information in the next few days.
+					</p>
+				</div>
+
+				<div class="detail nav-tabs tab-pane" id="celebrate">
+					<p>
+					Photos coming soon.
+					</p>
+				</div>
+
+				<div class="detail nav-tabs tab-pane" id="more">
+					<div class="form-group">
+					  <label for="name">Name:</label>
+					  <input type="text" class="form-control" id="name">
+					  <label for="message">Message:</label>
+					  <input type="text" class="form-control" id="message">
+					</div>
+					<div id="commentpane">
+
+					</div>
+				</div>
 			</div>
+			<!-- MIDDLE COLUMN-->
+
+			<!-- RIGHT COLUMN-->
+			<div id="rightmost" class="fittoheight container col-md-3">
+				
+			</div>
+			<!-- RIGHT COLUMN-->
 		</div>
 
 	</body>

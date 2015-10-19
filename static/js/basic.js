@@ -1,15 +1,25 @@
 $(document).ready(function(){
-	if(window.location.href.indexOf("?ready") > -1){
-		console.log("ready");
-		$("#life").show();
-	} else {
-		$("body").hide();
-	}
-	
+	var height = $(window).height();
+	$(".fittoheight").css("height", height);
+
+	$('li a[href*="more"]').bind('click', function(event){
+		console.log('trigger');
+	   $.ajax({
+		    url: "http://ec2-52-24-120-210.us-west-2.compute.amazonaws.com:3000?callback=paintComments",
+		    dataType: "jsonp",
+		    success: function( response ) {
+		    			        console.log( 'a' ); // server response
+
+		        alert( response ); // server response
+		    }
+		});
+	});
+
 });
 
-$("div.nav").bind('click', function(e){
-	console.log($(this).html());
-	$(".detail").hide();
-	$("#"+$(this).text().toLowerCase()).show();
-});
+function paintComments(commentObj){
+	console.log('a');
+}
+
+
+
