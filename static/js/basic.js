@@ -55,9 +55,7 @@ function submitComment(){
 		    success: function(data){
 		    	console.log(data);
 		    },
-		   	error: function (x, t, r) { 
-		   		alert(x.response.message); 
-		   	}
+		   	error: function (x, t, r) {	}
 		});
 	} else {
 		console.log("Not a valid comment");
