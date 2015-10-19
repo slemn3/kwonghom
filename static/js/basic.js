@@ -23,6 +23,23 @@ $('li a[href*="more"]').bind('click', function(event){
 	});
 });
 
+
+var photoArray = ["Baby Mark.jpg", "BigChristmasTree.jpg", "DickWedding.jpg", "DrumCorps.jpg", "FullSizeRender.jpg	", "lasVegas.jpg", "NancyWed.jpg", "RoseParade.jpg", "with Lems.jpg", "EPSON002.jpg", "EPSON009.jpg", "EPSON011.jpg", "EPSON017.jpg", "EPSON036.jpg", "EPSON038.jpg", "EPSON052.jpg", "EPSON132.jpg"];
+$('li a[href*="celebrate"]').bind('click', function(event){
+	$("#photogallery").html("");
+	$.each(photoArray, function(i,e){
+		var individualImageString = "";
+		individualImageString+='<li class="imgli col-lg-2 col-md-2 col-sm-3 col-xs-4" data-toggle="modal" data-target="#photomodal" >';
+    	individualImageString+='<img class="img-responsive" src="/images/gallery/'+e+'">';
+  		individualImageString+='</li>';
+  		$("#photogallery").append(individualImageString);
+	});
+
+	$("#photogallery li").bind('click', function(event){
+		$("#photomodal img").attr("src", event.target.src);
+	});
+});
+
 function paintComments(commentObj){
 	console.log('a');
 	if(commentObj != null){
