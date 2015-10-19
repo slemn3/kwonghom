@@ -29,7 +29,7 @@ function paintComments(commentObj){
 		var outputString = "";
 		$.each(commentObj, function(i,e){
 			outputString+="<div id='"+e.id+"'>";
-			outputString+=e.date+" <br/>";
+			// outputString+=e.date+" <br/>";
 			outputString+=e.submitter+":  "+e.content+" <br/>";
 			outputString+="</div>";
 
