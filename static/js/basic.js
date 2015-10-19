@@ -15,7 +15,7 @@ $(document).ready(function(){
 		    	console.log(data);
 		    },
 		   	error: function (x, t, r) { 
-		   		alert(x.response.message); 
+		   		// alert(x.response.message); 
 		   	}
 		});
 	});
