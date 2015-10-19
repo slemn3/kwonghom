@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.all('/*', VersionSetterMiddleware())
   var CommentController = App.require("app/controllers/commentcontroller")
   app.get('/', CommentController.index)
-  app.get('/comment', CommentController.addComment);
+  app.get('/comment/:who/:what', CommentController.addComment);
 
 
 }

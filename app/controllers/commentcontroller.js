@@ -6,7 +6,7 @@ exports.index = function (req,res) {
 
 exports.addComment = function (req,res) {
 	console.log(req.param("text"));
-	var response = commentService.newComment(req.param("text"));
+	var response = commentService.newComment(req.params.who, req.params.what);
 	res.send(response);
 };
 
