@@ -6,11 +6,11 @@ $(document).ready(function(){
 		console.log('trigger');
 
 	   $.ajax({
-		    url: "http://ec2-54-149-119-45.us-west-2.compute.amazonaws.com:3000?callback=comments",
+		    url: "http://ec2-54-149-119-45.us-west-2.compute.amazonaws.com:3000?callback=paintComments",
 		    type: 'GET',
 		    dataType: 'jsonp',
 		    cache: false,
-		    jsonp: 'comments',
+		    jsonp: 'paintComments',
 		    success: function(data){
 		    	console.log(data);
 		    },
