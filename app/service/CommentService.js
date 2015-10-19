@@ -14,7 +14,7 @@ CommentService.prototype.test = function(){
 
 CommentService.prototype.processComments = function(data, res){
 	console.log("Found data: "+ data);
-	res.send(data);
+	res.send("paintComments("+data+")");
 }
 
 CommentService.prototype.getComments = function(offset, pagesize, res){

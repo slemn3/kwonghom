@@ -4,14 +4,19 @@ $(document).ready(function(){
 
 	$('li a[href*="more"]').bind('click', function(event){
 		console.log('trigger');
-	   $.ajax({
-		    url: "http://ec2-52-24-120-210.us-west-2.compute.amazonaws.com:3000?callback=paintComments",
-		    dataType: "jsonp",
-		    success: function( response ) {
-		    			        console.log( 'a' ); // server response
 
-		        alert( response ); // server response
-		    }
+	   $.ajax({
+		    url: "http://ec2-54-149-119-45.us-west-2.compute.amazonaws.com:3000?callback=comments",
+		    type: 'GET',
+		    dataType: 'jsonp',
+		    cache: false,
+		    jsonp: 'comments',
+		    success: function(data){
+		    	console.log(data);
+		    },
+		   	error: function (x, t, r) { 
+		   		alert(x.response.message); 
+		   	}
 		});
 	});
 
@@ -19,6 +24,7 @@ $(document).ready(function(){
 
 function paintComments(commentObj){
 	console.log('a');
+	alert('b '+commentObj);
 }
 
 
